@@ -1,5 +1,5 @@
 {
-  "name": "ddd-specification-pattern",
+  "name": "ddd-with-specification-pattern",
   "private": true,
   "version": "1.0.0",
   "description": "This project is based on the DDD + Specification pattern.",
@@ -16,12 +16,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awakelife93/ddd-specification-pattern.git"
+    "url": "git+https://github.com/awakelife93/ddd-with-specification-pattern.git"
   },
   "bugs": {
-    "url": "https://github.com/awakelife93/ddd-specification-pattern/issues"
+    "url": "https://github.com/awakelife93/ddd-with-specification-pattern/issues"
   },
-  "homepage": "https://github.com/awakelife93/ddd-specification-pattern#readme",
+  "homepage": "https://github.com/awakelife93/ddd-with-specification-pattern#readme",
   "author": "HyunwooPark",
   "license": "MIT",
   "devDependencies": {
