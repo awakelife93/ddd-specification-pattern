@@ -1,20 +1,16 @@
 ### Example DDD + Specification Design Pattern
 
-This project is based on the DDD + Specification pattern.
+This project is based on the DDD + Specification pattern.\
+Add as many comparison logics as necessary for various logics or domains at the abstract level.
 
 ### [Demo](example.ts)
 
-The example only uses **And logic**, but or and not can also be used if necessary.
+The example only uses **AND logic**, but **OR** and **NOT** can also be used if necessary.
 
 - npm i or npm install
 - npm run example
 
 ```typescript
-const currentProduct = new Product("book", 1000, 0);
-const currentOrder = new Order(currentProduct, 1, 1000);
-const wrongProduct = new Product("book", 0, 0);
-const wrongOrder = new Order(wrongProduct, 0, 0);
-
 const currentProduct = new Product("book", 1000, 0);
 const currentOrder = new Order(currentProduct, 1, 1000);
 const wrongProduct = new Product("book", 0, 0);
