@@ -1,6 +1,6 @@
 import Order from "./domain/order/Order";
 import {
-  OrderAmountConsistencySpecification,
+  OrderPriceConsistencySpecification,
   OrderQuantityMustBeGreaterZeroSpecification,
 } from "./domain/order/Specification";
 import Product from "./domain/product/Product";
@@ -22,8 +22,8 @@ const productNameIsNotBlankSpecification =
 const productDiscountWithinLimitSpecification =
   new ProductDiscountWithinLimitSpecification();
 
-const orderAmountConsistencySpecification =
-  new OrderAmountConsistencySpecification();
+const orderPriceConsistencySpecification =
+  new OrderPriceConsistencySpecification();
 const orderQuantityMustBeGreaterZeroSpecification =
   new OrderQuantityMustBeGreaterZeroSpecification();
 
@@ -31,7 +31,7 @@ const productAndSpecification = productPriceMustBeGreaterZeroSpecification
   .and(productNameIsNotBlankSpecification)
   .and(productDiscountWithinLimitSpecification);
 
-const orderAndSpecification = orderAmountConsistencySpecification.and(
+const orderAndSpecification = orderPriceConsistencySpecification.and(
   orderQuantityMustBeGreaterZeroSpecification
 );
 

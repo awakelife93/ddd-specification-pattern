@@ -30,7 +30,7 @@ class ProductNameIsNotBlankSpecification extends CompositeSpecification<Product>
 /**
  * @class ProductDiscountWithinLimitSpecification
  * @description
- * The discounted amount of a product cannot be greater than the normal amount.
+ * The discounted price of a product cannot be greater than the normal price.
  */
 class ProductDiscountWithinLimitSpecification extends CompositeSpecification<Product> {
   isSatisfiedBy(candidate: Product): boolean {
@@ -41,7 +41,7 @@ class ProductDiscountWithinLimitSpecification extends CompositeSpecification<Pro
 }
 
 export {
-  ProductPriceMustBeGreaterZeroSpecification,
-  ProductNameIsNotBlankSpecification,
   ProductDiscountWithinLimitSpecification,
+  ProductNameIsNotBlankSpecification,
+  ProductPriceMustBeGreaterZeroSpecification,
 };

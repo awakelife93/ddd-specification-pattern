@@ -23,8 +23,8 @@ const productNameIsNotBlankSpecification =
 const productDiscountWithinLimitSpecification =
   new ProductDiscountWithinLimitSpecification();
 
-const orderAmountConsistencySpecification =
-  new OrderAmountConsistencySpecification();
+const orderPriceConsistencySpecification =
+  new OrderPriceConsistencySpecification();
 const orderQuantityMustBeGreaterZeroSpecification =
   new OrderQuantityMustBeGreaterZeroSpecification();
 
@@ -32,7 +32,7 @@ const productAndSpecification = productPriceMustBeGreaterZeroSpecification
   .and(productNameIsNotBlankSpecification)
   .and(productDiscountWithinLimitSpecification);
 
-const orderAndSpecification = orderAmountConsistencySpecification.and(
+const orderAndSpecification = orderPriceConsistencySpecification.and(
   orderQuantityMustBeGreaterZeroSpecification
 );
 
@@ -83,16 +83,16 @@ abstract class CompositeSpecification<T> implements Specification<T> {
 ### Example Domain & Specification
 
 - [Order](domain/order/Order.ts)
-  - OrderAmountConsistencySpecification
+  - OrderPriceConsistencySpecification
   - OrderQuantityMustBeGreaterZeroSpecification
 
 ```typescript
 /**
- * @class OrderAmountConsistencySpecification
+ * @class OrderPriceConsistencySpecification
  * @description
- * The order amount cannot exceed or be less than the total sum of the product price and discount amount.
+ * The order price cannot exceed or be less than the total sum of the product price and discount price.
  */
-class OrderAmountConsistencySpecification extends CompositeSpecification<Order> {
+class OrderPriceConsistencySpecification extends CompositeSpecification<Order> {
   isSatisfiedBy(candidate: Order): boolean {
     if (!candidate) return false;
 
@@ -153,7 +153,7 @@ class ProductNameIsNotBlankSpecification extends CompositeSpecification<Product>
 /**
  * @class ProductDiscountWithinLimitSpecification
  * @description
- * The discounted amount of a product cannot be greater than the normal amount.
+ * The discounted price of a product cannot be greater than the normal price.
  */
 class ProductDiscountWithinLimitSpecification extends CompositeSpecification<Product> {
   isSatisfiedBy(candidate: Product): boolean {

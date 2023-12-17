@@ -2,11 +2,11 @@ import CompositeSpecification from "../../Specification";
 import Order from "./Order";
 
 /**
- * @class OrderAmountConsistencySpecification
+ * @class OrderPriceConsistencySpecification
  * @description
- * The order amount cannot exceed or be less than the total sum of the product price and discount amount.
+ * The order price cannot exceed or be less than the total sum of the product price and discount price.
  */
-class OrderAmountConsistencySpecification extends CompositeSpecification<Order> {
+class OrderPriceConsistencySpecification extends CompositeSpecification<Order> {
   isSatisfiedBy(candidate: Order): boolean {
     if (!candidate) return false;
 
@@ -32,6 +32,6 @@ class OrderQuantityMustBeGreaterZeroSpecification extends CompositeSpecification
 }
 
 export {
-  OrderAmountConsistencySpecification,
+  OrderPriceConsistencySpecification,
   OrderQuantityMustBeGreaterZeroSpecification,
 };
